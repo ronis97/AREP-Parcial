@@ -38,7 +38,7 @@ public class HttpServer {
                     break;
                 }
             }
-            Path file = Paths.get("resources" + "index.html");
+            Path file = Paths.get("resources" + "/index.html");
             Charset charset = Charset.forName("UTF-8");
             String outmsg = "";
             outputLine =
