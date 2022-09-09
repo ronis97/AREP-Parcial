@@ -13,7 +13,7 @@ public class HttpServer {
         try {
             serverSocket = new ServerSocket(getPort());
         } catch (IOException e) {
-            System.err.println("Could not listen on port: 35000.");
+            System.err.println("Could not listen on port: " + getPort());
             System.exit(1);
         }
 
@@ -48,7 +48,7 @@ public class HttpServer {
             try (BufferedReader reader = Files.newBufferedReader(file, charset)) {
                 String line = null;
                 while ((line = reader.readLine()) != null) {
-                    System.out.println(line);
+                   // System.out.println(line);
                     outmsg += "\r\n" + line;
                 }
             } catch (IOException x) {
